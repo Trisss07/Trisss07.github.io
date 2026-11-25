@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trisha Nandan | Computer Science (Data Science and AI) Portfolio</title>
+<meta name="description" content="Portfolio of Trisha Nandan, BSc Computer Science (Data Science and AI) student at the University of Dundee.">
+<style>
+:root{--bg:#04050a;--surf:#0b1330;--surf2:#101c44;--navy:#14244f;--navy2:#2c4380;--soft:#9db1e6;--ink:#ffffff;--muted:#aab3c8;--line:#223260;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Segoe UI",Calibri,Arial,sans-serif}
+a{color:var(--soft)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(4,5,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.2rem;flex-wrap:wrap;gap:.5rem}
+.logo{color:#fff;font-family:Georgia,serif;font-weight:700;font-size:1.15rem;text-decoration:none;letter-spacing:.02em}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.4rem;flex-wrap:wrap}
+.nav ul a{color:var(--muted);text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding-bottom:.2rem;border-bottom:2px solid transparent}
+.nav ul a:hover,.nav ul a.on{color:#fff;border-color:#fff}
+.hero{background:radial-gradient(ellipse at 80% 0%,rgba(44,67,128,.7),transparent 55%),linear-gradient(160deg,#0b1330 0%,#04050a 70%);color:var(--ink);padding:6rem 1.2rem 5rem;border-bottom:1px solid var(--line)}
+.hero-in{max-width:1080px;margin:auto}
+.kicker{color:var(--soft);text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;font-weight:700}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);margin:.5rem 0 .8rem;color:#fff;letter-spacing:-.01em}
+.hero p{max-width:660px;font-size:1.12rem;color:#d3d9e8}
+.btns{margin-top:1.8rem}
+.btn{display:inline-block;padding:.8rem 1.6rem;margin:0 .6rem .6rem 0;border-radius:3px;font-weight:700;letter-spacing:.03em;text-decoration:none;border:2px solid #fff;background:#fff;color:#04050a;transition:all .15s}
+.btn.ghost{background:none;color:#fff;border-color:var(--navy2)}
+.btn:hover{background:var(--navy2);border-color:var(--navy2);color:#fff}
+.btn.ghost:hover{border-color:#fff;background:none}
+section{max-width:1080px;margin:auto;padding:4.5rem 1.2rem}
+.band{background:var(--surf);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band>section{padding:4.5rem 1.2rem}
+h2{font-size:2.1rem;margin:0 0 1.6rem;color:#fff}
+h2::after{content:"";display:block;width:56px;height:3px;background:#fff;margin-top:.6rem}
+.lead{color:var(--muted);max-width:700px;margin:-.6rem 0 2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem}
+.card{background:var(--surf);border:1px solid var(--line);border-top:3px solid var(--navy2);border-radius:6px;padding:1.5rem;transition:transform .15s,box-shadow .15s,border-color .15s}
+.band .card{background:var(--bg)}
+.card:hover{transform:translateY(-3px);border-top-color:#fff;box-shadow:0 10px 28px rgba(44,67,128,.45)}
+.card h3{margin:0 0 .2rem;color:#fff;font-size:1.3rem}
+.tagline{color:var(--soft);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 .7rem}
+dl{margin:.8rem 0 0}
+dt{font-weight:700;font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:.8rem}
+dd{margin:.1rem 0 0}
+.chip{display:inline-block;background:var(--navy);border:1px solid var(--navy2);color:#fff;border-radius:99px;padding:.05rem .8rem;margin:.15rem .15rem .15rem 0;font-size:.82rem}
+.tbd{background:#fff0a8;color:#3a3000;padding:0 .3rem;border-radius:3px}
+.link{display:inline-block;margin-top:1rem;font-weight:700;text-decoration:none;color:#fff;border-bottom:2px solid var(--navy2)}
+pre{background:#000;border:1px solid var(--line);color:#b8c7f0;padding:1.2rem;border-radius:6px;overflow-x:auto;font-size:.88rem;margin:1.8rem 0 0}
+h3.sub{font-size:1.5rem;color:#fff;margin:3rem 0 1.2rem}
+.cv-box{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:1.8rem}
+.cv-icon{width:90px;height:120px;background:var(--navy);border:2px solid #fff;color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:center;font:700 1.5rem Georgia,serif}
+.social{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.5rem}
+.social a{display:flex;align-items:center;gap:.9rem;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1rem 1.2rem;text-decoration:none;color:#fff;font-weight:600;transition:all .15s}
+.social a:hover{background:#fff;color:#04050a;border-color:#fff}
+.social svg{width:26px;height:26px;fill:currentColor;flex:none}
+footer{background:#000;border-top:1px solid var(--line);color:var(--muted);text-align:center;padding:2rem 1rem;font-size:.88rem}
+
+.hero-in{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:center}
+.photo{width:280px;height:340px;border-radius:12px;border:2px dashed var(--navy2);background:rgba(11,19,48,.6);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;object-fit:cover}
+.shot{width:100%;aspect-ratio:16/9;margin:1.1rem 0 .4rem;border-radius:6px;border:2px dashed var(--navy2);background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;object-fit:cover}
+.hero p+p{margin-top:1rem}
+@media(max-width:800px){.hero-in{grid-template-columns:1fr}.photo{order:-1;width:200px;height:240px}}
+
+.proj{display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;background:var(--surf);border:1px solid var(--line);border-top:3px solid var(--navy2);border-radius:6px;padding:1.8rem;margin-bottom:2rem}
+.proj h3{margin:0 0 .2rem;color:#fff;font-size:1.45rem}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;align-content:start}
+.gal .shot{margin:0}
+.gal .shot:first-child{grid-column:1/-1}
+.shot{aspect-ratio:16/10}
+img.shot{aspect-ratio:auto;height:auto;object-fit:contain;background:var(--bg)}
+.job{background:var(--surf);border:1px solid var(--line);border-left:3px solid var(--navy2);border-radius:6px;padding:1.2rem 1.5rem;margin-bottom:1rem}
+.job h3{margin:0;font-size:1.15rem;color:#fff}
+.job .meta{color:var(--soft);font-size:.9rem;margin:.1rem 0 .5rem}
+.job ul{margin:.3rem 0 0;padding-left:1.2rem}
+.band .job{background:var(--bg)}
+.codegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.2rem;margin-top:1.2rem}
+.codegrid pre{margin:.4rem 0 0}
+.cap{margin:0;font-size:.9rem;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
+@media(max-width:860px){.proj{grid-template-columns:1fr}}
+.hero-in{display:block;text-align:center}.hero-text{max-width:760px;margin:0 auto}.hero p{margin-left:auto;margin-right:auto}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="nav-in">
+  <a class="logo" href="#home">Trisha Nandan</a>
+  <nav><ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#connect">Connect</a></li>
+  </ul></nav>
+</div></header>
+
+<div class="hero" id="home"><div class="hero-in">
+  <div class="hero-text">
+    <div class="kicker">Computer Science (Data Science and AI) | University of Dundee</div>
+    <h1>Hi, I’m Trisha.</h1>
+    <p>I am a second-year Computer Science student with a strong interest in data, artificial intelligence, and responsible innovation. Through my studies, I have developed strong programming, analytical, and problem-solving skills in Python, Java, and C/C++, which I applied at a hackathon to build a generative AI study companion using Google’s Gemma model.</p>
+    <p>Alongside my degree, I work as a care worker and serve as a Class Representative, which has strengthened my communication, responsibility and teamworking skills. I am looking for a graduate career in data science and AI, where I can apply machine learning to real business problems.</p>
+  </div>
+</div></div>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <!-- IMAGES: replace each <div class="shot">…</div> with <img class="shot" src="your-image.png" alt="describe the image">. Add the image files to the same folder. -->
+  <article class="proj">
+    <div>
+      <h3>Momentum: AI Study Planner</h3>
+      <p class="tagline">GDG Build with Gemma Hackathon | University of Aberdeen | July 2026</p>
+      <p>A Streamlit study planner that turns a messy syllabus into a day-by-day revision schedule and gives a two-minute “momentum starter” action for topics users avoid, targeting the friction that causes procrastination. I competed against 15 UK teams for one of three prizes totalling $1,000.</p>
+      <p>Gemma 4 (Google AI Studio) parses syllabus text into topics, hours, difficulty and weak spots, while scheduling runs in plain Python so plans stay realistic and reliable. Weak spots are front-loaded into 25–50 minute sessions.</p>
+      <dl>
+        <dt>Technologies</dt><dd><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Gemma 4</span><span class="chip">Google AI Studio</span><span class="chip">Google GenAI SDK</span><span class="chip">python-dotenv</span><span class="chip">GitHub</span></dd>
+        <dt>My role</dt><dd>Worked within a cross-functional team to design and develop the application's AI-powered planning features. Integrated Google's Gemma model into the workflow, contributed to prompt engineering and data processing logic, and helped translate user requirements into a reliable study-planning solution.</dd>
+        <dt>Challenges and skills</dt><dd>Separated generative AI (Gemma) from deterministic scheduling (Python) so the tool stays reliable under hackathon time pressure. Gained experience in prompt design, teamwork and building AI-powered apps to a deadline.</dd>
+      </dl>
+      <a class="link" href="https://github.com/Trisss07/momentum-gemma">View on GitHub</a>
+    </div>
+    <div class="gal">
+       <img class="shot" src="app1.png"
+     style="display:block; width:500px; height:auto; margin:0 auto 20px;"
+     alt="App layout">
+
+<img class="shot" src="app2.png"
+     style="display:block; width:200px; height:auto; margin-left: 200px;"
+     alt="App layout">
+    </div>
+  </article>
+  <article class="proj">
+    <div>
+      <h3>Project Nova: Undersea Creature Hunt</h3>
+      <p class="tagline">Introduction to Software Development | University of Dundee | 2025/26</p>
+      <p>A two-player, turn-based Java game with a hidden 10×10 grid of undersea creatures. Players guess coordinates to earn points while their health drops each round, with a menu, scoring, hints (costing 2 points), booby traps (−10% health), power-ups (+10% health) and save/load to file.</p>
+      <dl>
+        <dt>Technologies</dt><dd><span class="chip">Java</span><span class="chip">2D arrays</span><span class="chip">File I/O</span><span class="chip">Debugger</span></dd>
+        <dt>My role</dt><dd>Designed and coded the whole game myself, including the board display, scoring and health systems, hint logic and save/load.</dd>
+        <dt>Challenges and skills</dt><dd>Fixed save/load and scoring bugs using a debugger (a variable clash resumed the wrong player), and evaluated limitations such as input validation to plan improvements.</dd>
+      </dl>
+      <a class="link" href="https://github.com/Trisss07/Project-Nova">View on GitHub</a>
+    </div>
+    <div class="gal">
+      <img class="shot" src="n1.png" alt="Game grid">
+    </div>
+  </article>
+  <article class="proj">
+    <div>
+      <h3>Multi-City Weather Display</h3>
+      <p class="tagline">Embedded Systems | University of Dundee | 2025/26</p>
+      <p>A Raspberry Pi Pico W device that shows live weather for five cities using the OpenWeatherMap REST API over Wi-Fi. One button cycles through the cities, and an RGB LED is colour-coded by temperature (purple at 5°C or below to red above 35°C) and flashes on errors.</p>
+      <dl>
+        <dt>Technologies</dt><dd><span class="chip">Raspberry Pi Pico W</span><span class="chip">OpenWeatherMap REST API</span><span class="chip">Wi-Fi</span><span class="chip">HTTP and JSON</span><span class="chip">RGB LED (PWM)</span></dd>
+        <dt>My role</dt><dd>Worked in a team to develop the MicroPython application, contributing to API integration, JSON data processing, and weather data handling. Helped implement the temperature-to-colour visualisation system and test the device for reliable real-time updates.</dd>
+        <dt>Challenges and skills</dt><dd>Learned to handle HTTP requests and JSON on a microcontroller, plus button debouncing and pull-up resistors, and redesigned the controls from five buttons to one.</dd>
+      </dl>
+      <a class="link" href="https://github.com/Trisss07/Multi-City-Weather-Display">View on GitHub</a>
+    </div>
+    <div class="gal">
+     <img class="shot" src="n2.png" alt="Pico board">
+    </div>
+  </article>
+</section>
+
+<div class="band"><section id="skills">
+  <h2>Skills</h2>
+  <h3 class="sub" style="margin-top:0">Technical skills</h3>
+  <div class="grid">
+    <div class="card"><h3>Programming</h3><p><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Java</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">HTML</span><span class="chip">CSS</span></p></div>
+    <div class="card"><h3>Tools and platforms</h3><p><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Cloud computing fundamentals (AWS)</span></p></div>
+    <div class="card"><h3>AI and data</h3><p><span class="chip">Data analysis and manipulation</span><span class="chip">Generative AI (Google Gemma)</span></p></div>
+    <div class="card"><h3>Currently developing</h3><p><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">TensorFlow</span><span class="chip">Google Cloud Platform</span></p></div>
+  </div>
+
+  <h3 class="sub">Code examples</h3>
+  <!-- CODE: replace the comment lines inside each box with your own code, and edit the caption above it. -->
+  <div class="codegrid">
+    <div><p class="cap">Snippet 1: Python, Project: Multi-City Weather Display, Description: Maps live weather temperatures to RGB LED colours on a Raspberry Pi Pico W weather monitoring system.</p><pre><code>def temp_to_color(temp_c):
+    if temp_c <= 5:
+        return (75, 0, 130)           # purple
+    elif temp_c <= 10:
+        return (32, 178, 170)         # teal
+    elif temp_c <= 15:
+        return (0, 128, 0)        # green
+    elif temp_c <= 20:
+        return (192, 250, 2)         # yellow-green
+    elif temp_c <= 25:
+        return (255, 255, 0)           # yellow
+    elif temp_c <= 30:               
+        return (255, 90, 0)           # orange
+    elif temp_c <= 35:
+        return (255, 69, 0)           # red-orange
+    else:
+        return (255, 0, 0)           # Red </code></pre></div>
+    <div><p class="cap">Snippet 2: Java, Project: Project Nova, Description: Hint feature that finds the first undiscovered creature part and tells the player where to look and reports the 2-point penalty.</p><pre><code>public void giveHint(Player player) {
+        for (Creatures c : creature) {
+            int[][] pos = c.getPositions();
+            boolean[] found = c.getFound();
+            for (int i = 0; i < pos.length; i++) {
+                if (!found[i]) {
+                    System.out.println("Hint for " + player.getName() +
+                        ": Try near (" + pos[i][0] + "," + pos[i][1] + ")");
+                    System.out.println(player.getName() + " lost 2 points for using a hint.");
+                    return;
+                }
+            }
+        }
+        System.out.println("No hints available — all creatures already found!");
+    }
+</code></pre></div>
+    <div><p class="cap">Snippet 3: Python, Project: Momentum - Study Planner, Description: Validates the exam date, then prioritises weak spots and harder topics so plans never contain impossible timelines.</p><pre><code>from datetime import date, timedelta
+from typing import Optional
+
+
+def build_schedule(
+    topics: list[dict],
+    exam_date: date,
+    start_date: Optional[date] = None,
+    max_hours_per_day: float = 3.0,
+    break_minutes: int = 10,
+) -&gt; list[dict]:
+    """
+    Turn a list of topics into a day-by-day plan.
+    Each day gets a list of sessions. Sessions are 25–50 minute blocks.
+    Weak spots and higher difficulty get earlier placement.
+    Returns list of {date, sessions: [{topic, minutes, type}]}.
+    """
+    if start_date is None:
+        start_date = date.today()
+
+    days_available = (exam_date - start_date).days
+    if days_available &lt;= 0:
+        raise ValueError("Exam date must be in the future.")
+
+    # Sort: weak spots first, then difficulty descending, then longer topics
+    ordered = sorted(
+        topics,
+        key=lambda t: (not t["weak_spot"], -t["difficulty"], -t["estimated_hours"]),
+    )
+
+    # ... sessions are then placed day by day (25–50 minute blocks with breaks)</code></pre></div>
+  </div>
+
+  <h3 class="sub">Transferable skills</h3>
+  <div class="grid">
+    <div class="card"><h3>Communication</h3><p>As a Class Representative for Computer Science, I collect feedback from classmates and discuss ways to improve the student experience with lecturers and the Head of Department.</p></div>
+    <div class="card"><h3>Teamwork</h3><p>I work well in teams, from hackathon projects under time pressure to shop floors at Tesco and the British Red Cross.</p></div>
+    <div class="card"><h3>Ethics and responsibility</h3><p>As a care worker for MyCare Tayside, I follow strict confidentiality and safeguarding standards and keep accurate records. This gives me a practical understanding of why fairness, privacy and trust matter in AI and data work.</p></div>
+    <div class="card"><h3>Problem-solving and adaptability</h3><p>Resolved customer issues, adapted quickly during busy periods and learned new technologies for hackathon delivery.</p></div>
+    <div class="card"><h3>Time management</h3><p>I balance a degree with part-time work and have stayed organised in fast-paced settings.</p></div>
+  </div>
+</section></div>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <h3 class="sub" style="margin-top:0">Work experience</h3>
+  <div class="job"><h3>Care Worker</h3><div class="meta">MyCare Tayside, Dundee | September 2026 – Present</div><ul>
+    <li>Support vulnerable people with daily living, building trust and following strict safeguarding and confidentiality standards, the same ethical mindset needed for responsible handling of customer data.</li>
+    <li>Keep accurate, timely records of care delivered and report concerns promptly, showing attention to detail and data accuracy.</li>
+    <li>Manage my own schedule and prioritise tasks independently while balancing full-time study.</li></ul></div>
+  <div class="job"><h3>Retail Volunteer</h3><div class="meta">British Red Cross, Dundee | March 2025 – June 2026</div><ul>
+    <li>Served customers, answered queries and resolved issues confidently; handled cash and till transactions accurately.</li>
+    <li>Worked closely with volunteers and staff to keep the shop running smoothly, communicating with supervisors as needed.</li></ul></div>
+  <div class="job"><h3>Seasonal Colleague</h3><div class="meta">Tesco Extra, Dundee | December 2025 – January 2026</div><ul>
+    <li>Kept stock levels and presentation to standard during peak Christmas trading, staying organised under pressure.</li>
+    <li>Operated tills efficiently and assisted customers, delivering friendly service in a fast-paced environment.</li></ul></div>
+
+  <h3 class="sub">Leadership and responsibility</h3>
+  <div class="job"><h3>Class Representative, Computer Science</h3><div class="meta">University of Dundee | Present</div><ul>
+    <li>Collect feedback from classmates and discuss how to improve the student experience with lecturers and the Head of Department.</li>
+    <li>Attend staff–student meetings, presenting student views clearly and following up on actions.</li></ul></div>
+  <div class="job"><h3>School Prefect</h3><div class="meta">Harris Academy, Dundee</div><ul>
+    <li>Acted as a role model and point of contact for pupils, building working relationships with staff and peers.</li></ul></div>
+
+  <h3 class="sub">Technology experience</h3>
+  <div class="job"><h3>Bright Network Internship Experience UK: Technology and Engineering</h3><div class="meta">Virtual | 2026</div><ul>
+    <li>Gained insight into the technology industry and roles within it, with practical career advice from industry leaders.</li></ul></div>
+</section>
+
+<div class="band"><section id="education">
+  <h2>Education and Certifications</h2>
+  <div class="job"><h3>BSc Computer Science (Data Science and AI)</h3><div class="meta">University of Dundee | 2025 – 2029 (expected)</div><ul>
+    <li>Studying programming, data science and AI, with a degree pathway directly aligned to machine learning, analytics and GenAI.</li>
+    <li>Class Representative for Computer Science: voice of the student cohort to staff.</li></ul></div>
+  <div class="job"><h3>Harris Academy, Dundee</h3><div class="meta">2022 – 2025</div><ul>
+    <li>SQA Advanced Higher: Mathematics, English</li>
+    <li>SQA Higher: Mathematics, Modern Studies, English, Physics, Computing Science</li></ul></div>
+  <div class="cols">
+    <div class="job"><h3>Certifications</h3><ul><li>AWS Cloud Practitioner: course completed (cloud concepts, core services, security and pricing)</li></ul></div>
+    <div class="job"><h3>Languages</h3><ul><li>English (fluent), Bengali (fluent), Hindi (fluent)</li></ul></div>
+  </div>
+</section></div>
+
+<section id="cv">
+  <h2>CV</h2>
+  <div class="cv-box">
+    <div class="cv-icon">CV</div>
+    <div>
+      <h3 style="margin:0 0 .8rem;color:#fff"></h3>
+      <a class="btn" href="Trisha_Nandan_CV.pdf" download>Download CV</a>
+      <a class="btn" href="Job advert.pdf" download>View job advert (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<div class="band"><section id="connect">
+  <h2>Connect</h2>
+  <p class="lead">Always happy to connect with others in tech.</p>
+  <div class="social">
+    <a href="https://github.com/Trisss07" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+    <a href="https://www.linkedin.com/in/trisha-nandan18" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="mailto:trishanandan1811@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2V5zm2 2v.5l8 5.5 8-5.5V7H4zm16 3.4-8 5.5-8-5.5V17h16v-6.6z"/></svg>Email me</a>
+  </div>
+
+</section></div>
+
+<footer>© 2026 Trisha Nandan | Portfolio content drafted with AI assistance and edited by me.</footer>
+
+<script>
+const links=[...document.querySelectorAll('.nav ul a')];
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('#home,section[id]').forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
